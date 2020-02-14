@@ -14,29 +14,29 @@
 
 
 
-    <div class="container">
+    <div class="container-fluid">
         <div class="row">
-            <div class="col header">Weather Dashboard
+            <div class=" header">Weather Dashboard
             </div>
         </div>
         <div class="row">
-            <div class="col-6 dark">
-                <div class="col">
-                    <form id="city-form">
-                        <label for="city-input">Search for a city</label>
-                        <input type="text" id="city-input"><br>
+            <div class="col-4 dark">
 
-                        <!-- This button will trigger our AJAX call -->
-                        <input id="find-city" type="submit" value="City Search">
-                    </form>
+                <form id="city-form">
+                    <label for="city-input">Search for a city</label><br>
+
+                    <input type="text" id="city-input"><br>
+
+                    <!-- This button will trigger our AJAX call -->
+                    <input id="find-city" type="submit" value="City Search">
+                </form>
+                <div id="pre">
+                    
                 </div>
             </div>
             <div class="col-6">
-                <div class="city-view">
-                    <div class="city"></div>
-                    <div class="wind"></div>
-                    <div class="humidity"></div>
-                    <div class="temp"></div>
+                <div id="city-view">
+
                 </div>
 
             </div>
