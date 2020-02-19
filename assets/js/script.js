@@ -49,13 +49,13 @@ function getWeather(city){
 
 }
 function printWeather(weather) {
-    var queryURL = "http://api.openweathermap.org/data/2.5/uvi?appid=" + APIKey + "&lat=" + weather.coord.lat + "&lon=" + weather.coord.lon
+    var queryURL = "https://api.openweathermap.org/data/2.5/uvi?appid=" + APIKey + "&lat=" + weather.coord.lat + "&lon=" + weather.coord.lon
     $.get(queryURL).then(function (results) {
         console.log(results)
         var cityView = $("#city-view")
         var newDiv = $("<div>").addClass("card p-2 mt-2")
         var title = $("<h1>" + weather.name + "</h1>");
-        var image = $("<img>").attr("src", "http://openweathermap.org/img/wn/" + weather.weather[0].icon + "@2x.png")
+        var image = $("<img>").attr("src", "https://openweathermap.org/img/wn/" + weather.weather[0].icon + "@2x.png")
         title.append(image)
         var temp = $("<div>").text("Temperature (F) " + weather.main.temp);
         var humid = $("<div>").text("Humidity: " + weather.main.humidity);
